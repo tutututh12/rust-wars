@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --sw-blue-light: #4A90E2;
+    --sw-blue: #2C5282;
+    --sw-blue-dark: #1A365D;
+    --sw-accent-light: #FFE81F;
+    --sw-accent: #FFD700;
+    --sw-accent-dark: #B8860B;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sw-blue hover:bg-sw-blue-light text-white font-bold py-2 px-4 rounded transition-colors duration-200;
+  }
+  
+  .btn-accent {
+    @apply bg-sw-accent hover:bg-sw-accent-light text-black font-bold py-2 px-4 rounded transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-sw-blue-dark/80 backdrop-blur-sm rounded-lg p-6 border border-sw-blue-light/20;
+  }
+
+  .heading {
+    @apply font-sci-fi text-sw-accent text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  .subheading {
+    @apply font-sci-fi text-sw-blue-light text-xl md:text-2xl;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 54, 93, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sw-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sw-blue-light);
+} 
